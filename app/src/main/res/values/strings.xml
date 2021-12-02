@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">GithubGraphQL</string>
+
+    <string name="main_page_top_bar_title">Github</string>
+
+    <string name="profile_pager_title">Profile</string>
+    <string name="repositories_pager_title">Repositories</string>
+    <string name="network_request_error">Oops! something went wrong. check your internet connection.</string>
 </resources>
