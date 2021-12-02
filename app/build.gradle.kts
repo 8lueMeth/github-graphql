@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     id("com.android.application")
     kotlin("android")
@@ -7,6 +10,10 @@ plugins {
 }
 
 android {
+    val keystorePropertiesFile = rootProject.file("keystore.properties")
+    val keystoreProperties = Properties()
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
     compileSdk = 31
     defaultConfig {
         applicationId = "com.example.githubgraphql"
@@ -14,6 +21,8 @@ android {
         targetSdk = 31
         versionCode = 1
         versionName = "1.0"
+
+        buildConfigField("String", "ACCESS_TOKEN", getApiKey())
 
         vectorDrawables {
             useSupportLibrary = true
@@ -90,4 +99,11 @@ dependencies {
 
     // Coil
     implementation("io.coil-kt:coil-compose:1.4.0")
+}
+
+fun getApiKey(): String {
+    val keystorePropertiesFile = rootProject.file("keystore.properties")
+    val keystoreProperties = Properties()
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+    return keystoreProperties["ACCESS_TOKEN"] as String
 }
