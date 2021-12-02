@@ -34,14 +34,12 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
-        useIR = true
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.0.1"
-        kotlinCompilerVersion = "1.5.21"
     }
     packagingOptions {
         resources {
@@ -71,4 +69,25 @@ dependencies {
     // Apollo
     implementation("com.apollographql.apollo:apollo-runtime:2.5.11")
     implementation("com.apollographql.apollo:apollo-coroutines-support:2.5.11")
+
+    // Room
+    implementation("androidx.room:room-runtime:2.3.0")
+    implementation("androidx.room:room-ktx:2.3.0")
+    kapt("androidx.room:room-compiler:2.3.0")
+
+    // Paging
+    implementation("androidx.paging:paging-runtime:3.1.0")
+    implementation("androidx.paging:paging-compose:1.0.0-alpha14")
+    testImplementation("androidx.paging:paging-common:3.1.0")
+
+    // OkHttp
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.0")
+
+    // Accompanist
+    implementation("com.google.accompanist:accompanist-pager:0.21.3-beta")
+    implementation("com.google.accompanist:accompanist-pager-indicators:0.21.3-beta")
+    implementation("com.google.accompanist:accompanist-swiperefresh:0.21.3-beta")
+
+    // Coil
+    implementation("io.coil-kt:coil-compose:1.4.0")
 }
