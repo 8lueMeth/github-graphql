@@ -2,7 +2,12 @@ package com.example.githubgraphql.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-val Purple200 = Color(0xFFBB86FC)
-val Purple500 = Color(0xFF6200EE)
-val Purple700 = Color(0xFF3700B3)
-val Teal200 = Color(0xFF03DAC5)
+val Grey = Color(0xFF757575)
+
+val Wisteria = Color(0xFFBB86FC) // Primary
+val Ultramarine = Color(0xFF3700B3) // Primary Variant
+val EggBlue = Color(0xFF03DAC6) // Secondary
+val ShadowBlack = Color(0xFF121212) // Background and Surface
+val Charm = Color(0xFFCF6679) // Error
+val Black = Color(0xFF000000) // OnPrimary, OnSecondary, OnError
+val White = Color(0xFFFFFFFF)// OnBackground, OnSurface
